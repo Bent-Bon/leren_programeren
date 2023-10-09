@@ -1,30 +1,25 @@
 from termcolor import colored
-start = str(input("spelen?: ")).lower()
-sand = 7.45
-geld_verlies = 0.37
+prijs_dag = 7.45
+prijs_vip = 0.074
 
 
-if start == "yes":
-    print(colored("menukaart:", "red"))
-    print(colored("dagkaart €7.45", "yellow"))
 
-    cro = int(input("hoeveel tickets wil je?: "))
+print(colored("dagkaart €7.45", "yellow"))
 
-    isk = (cro * sand)
+aantal_dagkaart = int(input("hoeveel tickets wil je?: "))
 
-    print(colored(f"dat is €{isk}", "green"))
+kosten_dagkaart = (aantal_dagkaart * prijs_dag)
+kosten_dagkaart = round(kosten_dagkaart, 2)
 
-    oculus = str(input("wil je de VIP-VR-GameSeat gebruiken?: ")).lower()
-    if oculus == "yes":
-        coupon = int(input("hoeveel minuten wil je? (gaat per 5 minuten): "))
-        isk = isk + (coupon * geld_verlies)
-        if cro == 4 and coupon == 45:
-            print("Dit geweldige dagje-uit met 4 mensen in de Speelhal met 45 minuten VR kost je maar 44.44 euro")
-        else:
-            print(colored(f"dan is het €{isk}", "green"))
-    elif oculus == "no":
-        print(colored("tot ziens", "green"))
-elif start == "no":
-    print(colored("dat is spijtig", "red"))
-else:
-    print(colored("wut?", "red"))
+print(colored(f"dat is €{kosten_dagkaart}", "green"))
+
+vraag_vip = str(input("wil je de VIP-VR-GameSeat gebruiken?: ")).lower()
+if vraag_vip == "yes":
+    print(colored("5 minuten vip kost €0.37", "yellow"))
+    aantal_vip = int(input("hoeveel minuten wil je?: "))
+    kosten_dagkaart = kosten_dagkaart + (aantal_vip * prijs_vip)
+    kosten_dagkaart = round(kosten_dagkaart, 2)
+    print(colored(f"dan wordt dan €{kosten_dagkaart}", "green"))
+    
+elif vraag_vip == "no":
+    print(colored("tot ziens", "green"))
