@@ -1,30 +1,25 @@
 from termcolor import colored
 start = str(input("mot je wat hebben?: ")).lower()
-sand = 0.39
-brood = 2.78
-geld_verlies = 0.50
+PRIJS_CROISANT = 0.39
+PRIJS_STOKBROOD = 2.78
+COUPON_KORTING = 0.50
 
 
-if start == "yes":
-    print(colored("menukaart:", "red"))
-    print(colored("croissant €0,39", "yellow"))
-    print(colored("stokbrood €2,78", "yellow"))
+print(colored("menukaart:", "red"))
+print(colored("croissant €0,39", "yellow"))
+print(colored("stokbrood €2,78", "yellow"))
 
-    cro = int(input("hoeveel croissants mot je?: "))
-    sto = int(input("hoeveel stokbrood moet je?: "))
+aantal_croisant = int(input("hoeveel croissants moet je?: "))
+aantal_stokbrood = int(input("hoeveel stokbrood moet je?: "))
 
-    isk = (cro * sand) + (sto * brood)
+prijs_croisant_stokbrood = (aantal_croisant * PRIJS_CROISANT) + (aantal_stokbrood * PRIJS_STOKBROOD)
 
-    print(colored(f"dat is €{isk}", "green"))
+print(colored(f"dat is €{prijs_croisant_stokbrood}", "green"))
 
-    oculus = str(input("heb je nog coupons?: ")).lower()
-    if oculus == "yes":
-        coupon = int(input("hoeveel heb je er?: "))
-        isk = isk - (coupon * geld_verlies)
-        print(colored(f"dan is het €{isk}", "green"))
-    elif oculus == "no":
-        print(colored("tot ziens", "green"))
-elif start == "no":
-    print(colored("dat is spijtig", "red"))
-else:
-    print(colored("wut?", "red"))
+vraag_coupon = str(input("heb je nog coupons?: ")).lower()
+if vraag_coupon == "yes":
+    aantal_coupons = int(input("hoeveel heb je er?: "))
+    prijs_croisant_stokbrood = prijs_croisant_stokbrood - (aantal_coupons * COUPON_KORTING)
+    print(colored(f"dan is het €{prijs_croisant_stokbrood}", "green"))
+elif vraag_coupon == "no":
+    print(colored("tot ziens", "green"))
