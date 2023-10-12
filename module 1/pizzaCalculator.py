@@ -2,6 +2,7 @@
 L_PIZZA = 13.99
 M_PIZZA = 9.99
 S_PIZZA = 7.99
+BTW_PERCENTAGE = 9
 
 
 print("hallo wij hebben een asortiment van")
@@ -18,8 +19,8 @@ prijs_M_pizza = (middel_pizza * M_PIZZA)
 kleine_pizza = int(input("hoeveel kleine pizza's wil je?: "))
 prijs_S_pizza = kleine_pizza * S_PIZZA
 
-totaal = groote_pizza + middel_pizza + kleine_pizza
-btw = totaal / 100 * 9
+totaal = prijs_L_pizza + prijs_M_pizza + prijs_S_pizza
+btw = totaal / 100 * BTW_PERCENTAGE
 btw_totaal = totaal + btw
 
 print(f"aantal groote pizza('s) {groote_pizza} €{prijs_L_pizza}")
