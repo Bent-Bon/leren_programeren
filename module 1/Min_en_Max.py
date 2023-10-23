@@ -1,6 +1,17 @@
-A = int(input("wat is je eerste cijfer?: "))
-B = int(input("wat is je tweede cijfer?: "))
+A = int(input("(a)wat is je eerste cijfer?: "))
+B = int(input("(b)wat is je tweede cijfer?: "))
 
 if A > B:
-    x =max(A, B)
-    print(f"{A} is het grootste nummer : {x}")
+    y = min(A, B)
+    x = max(A, B)
+    print(f"a is het grootste nummer: {x}")
+elif A < B:
+    y = min(A, B)
+    x = max(A, B)
+    print(f"a is het kleinste nummer: {y}")
+else:
+    y = min(A, B)
+    x = max(A, B)
+    print("a en b zijn even groot")
+print(f"het minnimum is {y}")
+print(f"het maximum is {x}")
