@@ -1,5 +1,5 @@
 gastheer = str(input("wie is de gastheer?: "))
-gasten = 21
+gasten = int(input("hoeveel gasten zijn er?: "))
 drank = True
 chips = False
 
