@@ -58,7 +58,10 @@ else:
     else:
         pass
 
-if rijbewijs == "ja" and hoed == "ja" and PASO == 9 and ECO == 9 :
-    print("☺")
+if rijbewijs == "ja" and hoed == "ja" and PASO == 9 and ECO == 9 and (snor == "ja" or haar == "ja" or lach == "ja") :
+    print("u bent aan genomen")
 else:
-    print(f"u bent niet aan genomen omdat {zieke_lijst_p2}")
+    print(f"u bent niet aan genomen omdat")
+
+for item in zieke_lijst_p2:
+    print(item)

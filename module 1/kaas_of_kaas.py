@@ -10,7 +10,11 @@ if start == "ja":
     else:
         hard = str(input("is de kaas steenhard?: ")).lower()
         if hard == "yes":
-            print("parmigiano reggiano")
+            brokkelig = input("is de kaas brokkelig?: ").lower()
+            if brokkelig == "yes":
+                print("Old Amsterdam")
+            else:
+                print("parmigiano reggiano")
         else:
             print("goudse kaas")
 else:
