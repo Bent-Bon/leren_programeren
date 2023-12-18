@@ -102,4 +102,3 @@ if jaar < 10:
         print("gerust advies")
 else:
     pass
-
