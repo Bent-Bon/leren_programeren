@@ -10,14 +10,33 @@ print(f"(45 cm) grote pizza's €{L_PIZZA}")
 print(f"(30 cm) middel pizza's €{M_PIZZA}")
 print(f"(20 cm) kleine pizza's €{S_PIZZA}")
 
-groote_pizza = int(input("hoeveel grote pizza's wil je?: "))
-prijs_L_pizza = groote_pizza * L_PIZZA
+while True:
+    try:
+        groote_pizza = int(input("hoeveel grote pizza's wil je?: "))
+        prijs_L_pizza = groote_pizza * L_PIZZA
+    except:
+        print("oops")
+    else:
+        break
 
-middel_pizza = int(input("hoeveel middel pizza's wil je?: "))
-prijs_M_pizza = (middel_pizza * M_PIZZA)
+while True:
+    try:
+        middel_pizza = int(input("hoeveel middel pizza's wil je?: "))
+        prijs_M_pizza = (middel_pizza * M_PIZZA)
+    except:
+        print("oops")
+    else:
+        break
 
-kleine_pizza = int(input("hoeveel kleine pizza's wil je?: "))
-prijs_S_pizza = kleine_pizza * S_PIZZA
+while True:
+    try:
+            kleine_pizza = int(input("hoeveel kleine pizza's wil je?: "))
+            prijs_S_pizza = kleine_pizza * S_PIZZA
+    except:
+        print("oops")
+    else:
+        break
+
 
 totaal = prijs_L_pizza + prijs_M_pizza + prijs_S_pizza
 btw = totaal / 100 * BTW_PERCENTAGE
