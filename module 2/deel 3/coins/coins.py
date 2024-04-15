@@ -4,7 +4,7 @@
 # structure of program: 
 
 coinValues = [50,20,10,5,2,1] #lijst met valeus die de munten moeten voostellen
-euros = [5,2,1] #lijst met data om te checken later in de code of het een euro is
+euros = [5,2,1] #lijst et data om te checken later in de code of het een euro is
 gegeven = [] #hier komt alles wat gegeven is in een string in te staan
 
 toPay = int(float(input('Amount to pay: '))* 100) #input wat er betaald moet worden
