@@ -1,4 +1,4 @@
-boodschappenlijst = []
+boodschappenlijst = {}
 
 while True:
 
@@ -6,12 +6,10 @@ while True:
 
     aantal = int(input(f"Hoeveel {item} wilt u toevoegen?: "))
 
-    for boodschap in boodschappenlijst:
-        if item in boodschap:
-            boodschap[item] += aantal
-            break
+    if item in boodschappenlijst:
+        boodschappenlijst[item] += aantal
     else:
-        boodschappenlijst.append({item: aantal})
+        boodschappenlijst.update({item: aantal})
 
     print(boodschappenlijst)
 
@@ -21,6 +19,11 @@ while True:
 
 print("Dit is uw boodschappenlijst: ")
 
-for boodschap in boodschappenlijst:
-    for key, value in boodschap.items():
-        print(f"{key} {value}")
+# for boodschap in boodschappenlijst:
+#     for key, value in boodschap.items():
+#         print(f"{key} {value}")
+
+print("-[ BOODSCHAPPENLIJST ]-")
+for item in boodschappenlijst:
+    print(f'{boodschappenlijst[item]}x {item}')
+print('----------------------')

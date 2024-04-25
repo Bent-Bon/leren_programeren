@@ -47,7 +47,11 @@ else:
                         exit()
                 else:
                     x = True
-        elif drinken == "champagne" or x == True:
+                    if drinken == "bier":
+                        print("sorry je mag geen alcohol bestellen onder 21")
+                        print(f"probeer het in {age_21} jaar nog eens")
+
+        if drinken == "champagne" or x == True:
             if bandje == "blauw" or bandje == "rood":
                 if bandje == "blauw":
                     print(eind_normaal)

@@ -10,9 +10,14 @@ while True:
     random_num = random.randint(1, 1000)
     print(random_num)
     while True:
-        gok_getal = int(input("doe een gok: "))
+        while True:
+            try:
+                gok_getal = int(input("doe een gok: "))
+            except:
+                print("er is iets mis gegaan")
+            else:
+                break
         abs_verschil = abs(random_num - gok_getal)
-
 
         if gok_getal == random_num:
             print("je hebt het goed geraden")
@@ -41,11 +46,22 @@ while True:
     rondjes_teller += 1
 
     print(f"je hebt {rondjes_teller} rondes gespeeld")
+    gok_rondes_teller = 0
 
     if rondjes_teller > 19:
         print("het spel eindigt hier")
         print("hier is je score")
         spel_einde = True
+    else:
+        while True:
+            try:
+                again = input("wil je nog een keer raden?: ").lower()
+            except:
+                print("er is iets mis gegaan")
+            else:
+                break
+        if again == "nee":
+            break
     
     print(f"je hebt {goed_teller} keer goed geraden")
     print(f"je hebt {slecht_teller} keer niet goed geraden")

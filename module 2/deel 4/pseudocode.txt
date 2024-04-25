@@ -1,0 +1,43 @@
+hij pakt een random getal tussen 1 en 1000
+
+hij vraagt om een getal
+
+if het gegokte getal gelijk staat aan het random getal
+	if false:
+
+	checkt oh het getal kleiner of groter is en geeft een variable mee van de uitkomst
+
+	print het absolute verschil tussen de twee getallen ***
+
+	eerst checkt hij of het absolute verschil kleiner dan 20 is
+	zo ja dan print hij je bent heel erg warm
+	en als dat false is dan checkt hij of kleiner 50
+	zo ja dan print hij je bent warm
+	zo niet en een van de vorige uitkomsten waren true komt het ook uit op deze
+
+	vervolgens checkt hij op welke ronde en als hij hoger dan 10 is
+		if false
+		dan print hij op welke ronde hij zit
+		vraagt opnieuw een gok en genereert een niew getal
+
+		if true
+		dan reset hij de ronde teller
+
+if totaal games/rondes is meer dan 20 is
+	true
+	spel gewonnen word true
+	print einde spel
+
+	false
+	condje counter + 1
+	print welke ronde het is
+
+print score
+print hoeveel rondjes je gespeelt heb
+
+if spel gewonnen
+	true
+	einde spel
+
+	false
+	terug naar start en start weer met een random getal pakken en om een getal vragen
