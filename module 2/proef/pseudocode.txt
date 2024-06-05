@@ -1,0 +1,32 @@
+import random
+
+maak een lijst aan
+
+geef een naam
+
+if naam in lijst
+    True
+    terug naar namen vragen
+
+    else:
+    naam aan lijst toevoegen
+
+if namen len kleiner dan 3
+    True
+    terug naar namen vragen en verder van uti daar
+
+    else
+    vraag of je een naam wilt toevoegen
+    zo ja terug naar namen vragen en verder van uit daar
+
+shuffle lijst
+
+maak een nieuwe lijst aan
+
+voeg alle namen met een uniek lootje toe in een dict aan de lijst
+
+check of alle namen en lootjes niet het zelfde zijn
+
+if het zelfde reset lijst en shuffle opnieuw en verder vanaf daar
+
+print lijst
