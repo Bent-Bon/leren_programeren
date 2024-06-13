@@ -4,10 +4,13 @@ func_checker_extra_opp = ["e", "f", "g", "h"]
 func_checker = ["a", "b", "c", "d", "e", "f", "g", "h", ""]
 tekst = "wat wilt u doen?"
 full_som = ""
+stoppen = ""
 firstround = True
 while True:
+    if firstround == False:
+        stoppen = "of niets om te stoppen: "
     while True:
-        func = input(f"{tekst} \n getallen optellen, A) \n getallen aftrekken, B) \n getallen vermenigvuldigen, C) \n getallen delen, D) \n getal ophogen, E) \n getal verlagen, F) \n getal verdubbelen, G) \n getal halveren?, H) \n of niets om te stoppen: ").lower()
+        func = input(f"{tekst} \n getallen optellen, A) \n getallen aftrekken, B) \n getallen vermenigvuldigen, C) \n getallen delen, D) \n getal ophogen, E) \n getal verlagen, F) \n getal verdubbelen, G) \n getal halveren?, H) \n {stoppen}").lower()
         if func not in func_checker:
             print("ongeldige invoer")
         else:
@@ -16,6 +19,7 @@ while True:
                     exit()
                 else:
                     print("u heeft nog niets ingevoerd")
+                    continue
             while True:
                 if firstround == True:
                     print("eerste nummer")
