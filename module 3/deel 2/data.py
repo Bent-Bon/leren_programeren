@@ -1,5 +1,5 @@
 #constants
-JOURNEY_IN_DAYS = 0
+JOURNEY_IN_DAYS = 11
 
 #data
 mainCharacter = {
@@ -13,6 +13,9 @@ mainCharacter = {
         'copper' : 5
     }
 }
+
+COST_FOOD_HUMAN_COPPER_PER_DAY = 4
+COST_FOOD_HORSE_COPPER_PER_DAY = 3
 
 friends = []
 
