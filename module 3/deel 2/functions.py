@@ -1,7 +1,7 @@
 import time
 from termcolor import colored
-COST_FOOD_HORSE_COPPER_PER_DAY = 3
-from data import JOURNEY_IN_DAYS, COST_FOOD_HUMAN_COPPER_PER_DAY, COST_FOOD_HORSE_COPPER_PER_DAY
+from data import *
+from math import ceil
 
 ##################### O03 #####################
 
@@ -37,32 +37,48 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 ##################### O06 #####################
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    pass
+    sorted_list = []
+    for dict in list:
+        for item in dict:
+            if item == key:
+                if dict[item] == value:
+                    sorted_list.append(dict)
+    return sorted_list
+
 
 def getAdventuringPeople(people:list) -> list:
-    pass
+    return getFromListByKeyIs(people, "adventuring", True)
 
 def getShareWithFriends(friends:list) -> list:
-    pass
+    return getFromListByKeyIs(friends, "shareWith", True)
 
 def getAdventuringFriends(friends:list) -> list:
-    pass
+    return getShareWithFriends(getAdventuringPeople(friends))
 
 ##################### O07 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
-    pass
+    return ceil(people / 2)
 
 def getNumberOfTentsNeeded(people:int) -> int:
-    pass
+    return ceil(people / 3)
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
-    pass
+    horse_cost = silver2gold(11 * (horses * COST_HORSE_SILVER_PER_DAY))
+    tent_cost = 2 * (tents * COST_TENT_GOLD_PER_WEEK)
+    return round(horse_cost + tent_cost, 2)
 
 ##################### O08 #####################
 
 def getItemsAsText(items:list) -> str:
-    pass
+    return_str = ""
+    for item in items:
+        return_str += f"{item['amount']}{item['unit']} {item['name']}"
+    if item == items[:-1]:
+        return_str += " & "
+    elif len(items) > 1:
+        return_str += ", "
+    return return_str
 
 def getItemsValueInGold(items:list) -> float:
     pass
